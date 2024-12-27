@@ -1,0 +1,46 @@
+output_dir: /content/drive/MyDrive/Graph Representation Learning/Mini Project/ULTRA-main/Output
+checkpoint: /content/drive/MyDrive/Graph Representation Learning/Mini Project/ULTRA-main/Output/Ultra/JointDataset/large_with_start/model_epoch_7.pth
+
+dataset:
+  class: JointDataset
+  graphs: [FB15k237, WN18RR, CoDExMedium]
+  root: ~/git/ULTRA/kg-datasets/
+
+model:
+  class: Ultra
+  relation_model:
+    class: RelNBFNet
+    input_dim: 32
+    hidden_dims: [32, 32, 32, 32]
+    message_func: distmult
+    aggregate_func: sum
+    short_cut: yes
+    layer_norm: yes
+  entity_model:
+    class: EntityNBFNet
+    input_dim: 32
+    hidden_dims: [32, 32, 32, 32]
+    message_func: distmult
+    aggregate_func: sum
+    short_cut: yes
+    layer_norm: yes
+
+task:
+  name: MultiGraphPretraining
+  num_negative: 512
+  strict_negative: yes
+  adversarial_temperature: 1
+  metric: [mr, mrr, hits@1, hits@3, hits@10]
+
+optimizer:
+  class: AdamW
+  lr: 5.0e-4
+
+train:
+  gpus: {{ gpus }}
+  batch_size: 64
+  num_epoch: 3
+  log_interval: 250
+  batch_per_epoch: 10000
+  fast_test: 100
+  #logger: wandb

@@ -1,0 +1,50 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="ninja" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E402" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="cv2.cvtColor" />
+          <option value="cv2.COLOR_RGB2HSV" />
+          <option value="cv2.VideoCapture" />
+          <option value="cv2.VideoWriter" />
+          <option value="cv2.VideoWriter_fourcc" />
+          <option value="BTD_V8" />
+          <option value="Testing.PythonNetTests.System" />
+          <option value="System" />
+          <option value="Darts" />
+          <option value="MapHandler" />
+          <option value="Balloons" />
+          <option value="TestingSpace" />
+          <option value="GameSpace" />
+          <option value="RenderSpace" />
+          <option value="Game.DartTowerSpace" />
+          <option value="DrawableSpace" />
+          <option value="StringSpace" />
+          <option value="RopePhysics" />
+          <option value="RopePhysics2" />
+          <option value="RopeMesh.EdgeDetectionSpace" />
+          <option value="AssetCreator3.EdgeDetection" />
+          <option value="float.item" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
